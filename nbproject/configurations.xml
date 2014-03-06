@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="Maiter">
+      <df name="bin">
+        <df name="release">
+          <df name="CMakeFiles">
+            <df name="2.8.10.1">
+              <df name="CompilerIdC">
+                <in>CMakeCCompilerId.c</in>
+              </df>
+              <df name="CompilerIdCXX">
+                <in>CMakeCXXCompilerId.cpp</in>
+              </df>
+            </df>
+          </df>
+          <df name="util">
+            <in>common.pb.cc</in>
+            <in>common.pb.h</in>
+          </df>
+          <df name="worker">
+            <in>worker.pb.cc</in>
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <df name="client">
+          <in>client.h</in>
+        </df>
+        <df name="examples">
+          <in>adsorption.cc</in>
+          <in>katz.cc</in>
+          <in>main.cc</in>
+          <in>pagerank.cc</in>
+          <in>shortestpath.cc</in>
+          <in>simrank.cc</in>
+        </df>
+        <df name="external">
+          <df name="google-flags">
+            <df name="gflags">
+              <in>gflags.h</in>
+            </df>
+            <df name="google">
+              <in>gflags.h</in>
+            </df>
+            <in>gflags-config.h</in>
+            <in>gflags.cc</in>
+            <in>gflags_nc.cc</in>
+            <in>gflags_reporting.cc</in>
+            <in>mutex.h</in>
+          </df>
+          <df name="google-logging">
+            <df name="base">
+              <in>commandlineflags.h</in>
+              <in>googleinit.h</in>
+              <in>mutex.h</in>
+            </df>
+            <df name="glog">
+              <in>log_severity.h</in>
+              <in>logging.h</in>
+              <in>raw_logging.h</in>
+              <in>vlog_is_on.h</in>
+            </df>
+            <in>demangle.cc</in>
+            <in>demangle.h</in>
+            <in>glog-config.h</in>
+            <in>logging.cc</in>
+            <in>raw_logging.cc</in>
+            <in>signalhandler.cc</in>
+            <in>stacktrace.h</in>
+            <in>stacktrace_x86-inl.h</in>
+            <in>symbolize.cc</in>
+            <in>symbolize.h</in>
+            <in>utilities.cc</in>
+            <in>utilities.h</in>
+            <in>vlog_is_on.cc</in>
+          </df>
+          <df name="webgraph">
+            <in>webgraph.cc</in>
+            <in>webgraph.h</in>
+          </df>
+        </df>
+        <df name="kernel">
+          <in>deltatable.h</in>
+          <in>global-table.cc</in>
+          <in>global-table.h</in>
+          <in>kernel.cc</in>
+          <in>kernel.h</in>
+          <in>local-table.cc</in>
+          <in>local-table.h</in>
+          <in>logger.hpp</in>
+          <in>statetable.h</in>
+          <in>table-registry.cc</in>
+          <in>table-registry.h</in>
+          <in>table.h</in>
+        </df>
+        <df name="master">
+          <in>master.cc</in>
+          <in>master.h</in>
+        </df>
+        <df name="store">
+          <in>blockreader.h</in>
+          <in>blockwriter.h</in>
+          <in>cache.h</in>
+          <in>const.h</in>
+          <in>fifocache.h</in>
+          <in>filemanager.h</in>
+          <in>flat_file.cpp</in>
+          <in>index.h</in>
+          <in>kvmap.h</in>
+          <in>kvreader.h</in>
+          <in>lrucache.h</in>
+          <in>record.cpp</in>
+          <in>record.h</in>
+          <in>sstore.h</in>
+        </df>
+        <df name="util">
+          <in>common.cc</in>
+          <in>common.h</in>
+          <in>file.cc</in>
+          <in>file.h</in>
+          <in>hash.h</in>
+          <in>rpc.cc</in>
+          <in>rpc.h</in>
+          <in>static-initializers.cc</in>
+          <in>static-initializers.h</in>
+          <in>stringpiece.cc</in>
+          <in>stringpiece.h</in>
+          <in>timer.h</in>
+          <in>tuple.h</in>
+        </df>
+        <df name="worker">
+          <in>worker.cc</in>
+          <in>worker.h</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="Modules"
+                   displayName="Modules"
+                   projectFiles="true"
+                   root="/usr/share/cmake-2.8/Modules">
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c</itemPath>
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp</itemPath>
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCompilerABI.h</itemPath>
+      <itemPath>/usr/share/cmake-2.8/Modules/CheckFunctionExists.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>maiter</executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/usr/share/cmake-2.8/Modules/CMakeCompilerABI.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/usr/share/cmake-2.8/Modules/CheckFunctionExists.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool>
+          <preprocessorList>
+            <Elem>CHECK_FUNCTION_EXISTS=pthread_create</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="bin/release/CMakeFiles/2.8.10.1/CompilerIdC/CMakeCCompilerId.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="bin/release/CMakeFiles/2.8.10.1/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="bin/release/util/common.pb.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="bin/release/util/common.pb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bin/release/worker/worker.pb.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <folder path="Maiter/src/external">
+        <ccTool>
+          <preprocessorList>
+            <Elem>HAVE_LIB_GFLAGS</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PC_FROM_UCONTEXT=uc_mcontext.gregs[REG_EIP]</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="Maiter/src/external/google-flags">
+        <ccTool>
+          <incDir>
+            <pElem>bin/release/external/google-flags</pElem>
+            <pElem>src/external/google-flags</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="Maiter/src/external/google-logging">
+        <ccTool>
+          <incDir>
+            <pElem>bin/release/external/google-logging</pElem>
+            <pElem>src/external/google-logging</pElem>
+            <pElem>src/external/google-flags</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="Maiter/src/external/webgraph">
+        <ccTool>
+          <incDir>
+            <pElem>bin/release/external/webgraph</pElem>
+            <pElem>src/external/webgraph</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="Modules">
+        <cTool>
+          <incDir>
+            <pElem>bin/release/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>bin/release/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="src/client/client.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/examples/adsorption.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/examples/katz.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/examples/main.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/examples/pagerank.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/examples/shortestpath.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/examples/simrank.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/external/google-flags/gflags-config.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-flags/gflags.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-flags/gflags/gflags.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-flags/gflags_nc.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-flags/gflags_reporting.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-flags/google/gflags.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-flags/mutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/external/google-logging/base/commandlineflags.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/base/googleinit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/base/mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/demangle.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/demangle.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/glog-config.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/glog/log_severity.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/glog/logging.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/glog/raw_logging.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/glog/vlog_is_on.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/logging.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/raw_logging.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/signalhandler.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/stacktrace.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/stacktrace_x86-inl.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/symbolize.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/symbolize.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/utilities.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/utilities.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/external/google-logging/vlog_is_on.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/external/webgraph/webgraph.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/external/webgraph/webgraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/deltatable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/global-table.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/kernel/global-table.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/kernel.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/kernel/kernel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/local-table.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/kernel/local-table.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/logger.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/statetable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/table-registry.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/kernel/table-registry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/kernel/table.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/master/master.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/master/master.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/blockreader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/blockwriter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/const.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/fifocache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/filemanager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/flat_file.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/store/index.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/kvmap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/kvreader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/lrucache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/record.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/store/record.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/store/sstore.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/common.cc" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>bin/release/util</pElem>
+            <pElem>src/util</pElem>
+            <pElem>src</pElem>
+            <pElem>bin/release</pElem>
+            <pElem>/usr/local/include</pElem>
+            <pElem>/usr/include/python2.7</pElem>
+            <pElem>/usr/lib/openmpi/include</pElem>
+            <pElem>/usr/lib/openmpi/include/openmpi</pElem>
+            <pElem>src/external/google-flags</pElem>
+            <pElem>src/external/google-logging</pElem>
+            <pElem>src/external/webgraph</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_LIB_GFLAGS</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PC_FROM_UCONTEXT=uc_mcontext.gregs[REG_EIP]</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/util/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/file.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/util/file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/hash.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/rpc.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/util/rpc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/static-initializers.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/util/static-initializers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/stringpiece.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/util/stringpiece.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/timer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/util/tuple.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/worker/worker.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/worker/worker.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
