@@ -42,8 +42,6 @@ namespace sstore {
 
         ~BlockReader();
 
-        //std::string getText()const;
-
         std::string getBlockText(std::string filename, int blockIndex);
 
 

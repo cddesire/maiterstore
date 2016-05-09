@@ -197,18 +197,6 @@ namespace sstore {
                 }
             }
         }
-
-        /*if (this->kv.size() < CACHE_SIZE) {
-            this->add(key, val, prority);
-        } else {
-            this->add(key, val, prority);
-            std::multimap<double, K>::iterator it = pk.begin();
-             if (it->first < prority) {
-                 K key = this->deleteMin();
-                 this->remove(key);
-                 this->add(key, val, prority);
-             }
-        }*/
     }
 
 }
