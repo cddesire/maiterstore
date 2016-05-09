@@ -59,70 +59,7 @@ namespace sstore {
         close(fd);
     }
 
-    //    pthread_mutex_t lock;
-    //
-    //    struct thread_block {
-    //        int infd; //source file handler  
-    //        size_t start; // the start position of block
-    //        int index; // the number of block
-    //    };
-
-    //    void copy_array(int start, const char* src, int readLen) {
-    //                memcpy(buffer + start, src, readLen);
-    //    }
-
-    //   void* thread_copy_fn(void *arg) {
-    //        struct thread_block *block = (struct thread_block *) arg;
-    //        char buf[THREADS_BUFF_SIZE];
-    //        int ret;
-    //        size_t offset = block->index * BLOCK_SIZE;
-    //        pthread_mutex_lock(&lock);
-    //        ret = lseek(block->infd, offset + block->start, SEEK_SET);
-    //        int bytes_read = read(block->infd, buf, sizeof (buf));
-    //        if (bytes_read > 0) {
-    //            copy_array(block->start, buf, bytes_read);
-    //        }
-    //        pthread_mutex_unlock(&lock);
-    //        pthread_exit(NULL);
-    //    }
-
     std::string BlockReader::getBlockText(std::string filename, int blockIndex) {
-        //        int infd = open(filename.c_str(), O_RDONLY);
-        //        if (infd == -1) {
-        //            std::cout << "error while open file " << filename << std::endl;
-        //            return "";
-        //        }
-        //
-        //        if (pthread_mutex_init(&lock, NULL) != 0) {
-        //            std::cout << "\n mutex init failed\n";
-        //            return "";
-        //        }
-        //
-        //        //texter.clear();
-        //        struct thread_block *blocks = (struct thread_block *)
-        //                malloc(sizeof (struct thread_block)* THREADS_COUNT);
-        //
-        //        int i = 0;
-        //        //init-thread-block  
-        //        for (; i < THREADS_COUNT; ++i) {
-        //            blocks[i].infd = infd;
-        //            blocks[i].start = i * THREADS_BUFF_SIZE;
-        //            blocks[i].index = blockIndex;
-        //        }
-        //
-        //        pthread_t ptid[THREADS_COUNT];
-        //
-        //        for (i = 0; i < THREADS_COUNT; ++i) {
-        //            pthread_create(&ptid[i], NULL, thread_copy_fn, &(blocks[i]));
-        //        }
-        //        ///Join  
-        //        for (i = 0; i < THREADS_COUNT; ++i) {
-        //            pthread_join(ptid[i], NULL);
-        //        }
-        //        ///release  
-        //        free(blocks);
-        //        close(infd);
-        //        pthread_mutex_destroy(&lock);
         buffer = (char*) mmap(NULL, BLOCK_SIZE, PROT_READ, MAP_SHARED, fd, blockIndex * BLOCK_SIZE);
         if (buffer == MAP_FAILED) {
             perror("mmap error");

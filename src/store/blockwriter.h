@@ -89,12 +89,8 @@ namespace sstore {
         string line;
         int i = 0;
         while (std::getline(*in, line, '\n')) {
-            //cout<<"line: "<<line<<"\tline size:  "<<line.size()<<"\t buffer size:  "<<buffer.size()<<endl;
-            //cout<<"i= "<<i<<"\tbuffer :  "<<buffer<<endl;
             if ((buffer.size() + line.size()) > BLOCK_SIZE) {
-                // cout<<"line: "<<line<<endl;
                 this->setMasters(buffer);
-                // cout<<"i= "<<i<<"\tbuffer :  "<<buffer<<endl;
                 fillBuffer();
                 this->write(i, buffer.c_str(), buffer.size());
                 buffer.clear();
@@ -105,15 +101,12 @@ namespace sstore {
             line.clear();
         }//end while
 
-
         //last block
         if (buffer.size() != 0) {
             this->setMasters(buffer);
             this->write(i, buffer.c_str(), buffer.size());
              fillBuffer();
         }
-
-
     }
 
     string BlockWriter::handleLine(string line) {

@@ -29,28 +29,6 @@ namespace sstore{
         return this->memory_area;
     }
     
-//    void* MMapedFile::writeMmapFile(std::string filename, int size) {
-//        std::clog << "open and mmap file\n";
-//        if (filename.c_str()[0] == '\0') {
-//            throw SStoreException("filename is empty.");
-//        }
-//
-//        if (fd == -1) {
-//            fd = open(filename.c_str(), O_RDWR | O_CREAT | O_TRUNC, (mode_t) 0600);
-//            if (fd < 0) {
-//                throw SStoreException("Error opening file " + filename);
-//            }
-//        }
-//
-//        
-//        memory_area = mmap(0, size * sizeof (int), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-//
-//        if (memory_area == MAP_FAILED) {
-//            throw SStoreException("Error in mmap " + filename);
-//        }
-//        return this->memory_area;
-//    }
-
     void *MMapedFile::openAndMmapFile(std::string filename, enum access_mode access_mode,
             off_t offset, size_t length, bool map_whole_file, bool allow_remap) {
         if (filename.c_str()[0] == '\0') {
