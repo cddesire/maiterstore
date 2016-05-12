@@ -64,14 +64,12 @@ public:
                     while(!parent_.buckets_[rand_pos].in_use){
                         rand_pos = rand_num();
                     }
-
                     b_no_change = b_no_change && parent_.buckets_[rand_pos].v1 != defaultv;
                 }
             }else{
                 b_no_change = false;
             }
 
-            //Next();
         }
 
 	virtual ~Iterator(){}
@@ -153,16 +151,6 @@ public:
 
                 if(b_no_change && bfilter) return;
                 if(!bfilter) b_no_change = false;
-
-                /*
-                //determine priority
-                for(i=0; i<parent_.size_; i++){
-                    if(parent_.buckets_[i].v1 == defaultv) continue;
-                    V sum = ((IterateKernel<V1>*)parent.info_.iterkernel)->accumulate(&parent_.buckets_[i].v1, parent_.buckets_[i].v2);
-                    parent_.buckets_[i].priority = abs(sum - parent_.buckets_[i].v2);
-                }
-                */
-                
                 //get the cut index, everything larger than the cut will be scheduled
                 sort(sampled_pos.begin(), sampled_pos.end(), compare_priority(parent_));
                 int cut_index = sample_size*parent_.info_.schedule_portion;
