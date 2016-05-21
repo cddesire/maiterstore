@@ -9,7 +9,6 @@
 
 #include <queue>
 
-//#define GLOBAL_TABLE_USE_SCOPEDLOCK
 
 DECLARE_int32(bufmsg);
 
