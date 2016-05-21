@@ -108,59 +108,7 @@ static void TestUpdate() {
     CHECK_EQ(t->getF3(i), "10");
   }
 }
-/*
-typedef NetDecodeIterator<int, int, int, string> NetUpdateDecoder;
 
-template <class T>
-static void TestSerialize() {
-  T* t = GetTable<T>();
-
-  static const int kTestSize = 10000;
-  for (int i = 0; i < kTestSize; ++i) {
-    t->put(i, 1, 2, "10");
-  }
-
-  CHECK_EQ(t->size(), kTestSize);
-
-  KVPairData tdata;
-  T* t2 = GetTable<T>();
-
-  ProtoKVPairCoder c(&tdata);
-  NetUpdateDecoder it;
-  t2->deserializeFromNet(&c, &it);
-
-  for(;!it.done(); it.Next()) {
-	  t2->updateF1(it.key(),it.value1());
-  }
-
-  LOG(INFO) << "Serialized table to: " << tdata.ByteSize() << " bytes.";
-
-  CHECK_EQ(t->size(), t2->size());
-
-  TableIterator *i1 = t->get_iterator();
-  TableIterator *i2 = t2->get_iterator();
-
-  int count = 0;
-  string k1, k2, v1, v2;
-
-  while (!i1->done()) {
-    CHECK_EQ(i2->done(), false);
-
-    i1->key_str(&k1); i1->value1_str(&v1);
-    i2->key_str(&k2); i2->value1_str(&v2);
-
-    CHECK_EQ(k1, k2);
-    CHECK_EQ(v1, v2);
-
-    i1->Next();
-    i2->Next();
-    ++count;
-  }
-
-  CHECK_EQ(i2->done(), true);
-  CHECK_EQ(count, t->size());
-}
-*/
 typedef SparseTable<int, int, int, string> STInt;
 
 REGISTER_TEST(SparseTablePut, TestPut<STInt>());
