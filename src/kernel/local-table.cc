@@ -24,7 +24,6 @@ void LocalTable::start_checkpoint(const string& f) {
 
   delta_file_ = new LocalTableCoder(f + ".delta", "w");
   VLOG(1) << "End.";
-  //  LOG(INFO) << "Flushed " << file << " to disk in: " << t.elapsed();
 }
 
 void LocalTable::finish_checkpoint() {
@@ -70,9 +69,7 @@ void LocalTable::write_delta(const KVPairData& put) {
 void LocalTable::termcheck(const string& f, long* updates, double* currF2) {
   VLOG(1) << "Start snapshot " << f;
   Timer t;
-
   serializeToSnapshot(f, updates, currF2);
-
   VLOG(1) << "Flushed " << f << " to disk in: " << t.elapsed();
 }
 
