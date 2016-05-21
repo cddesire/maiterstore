@@ -612,17 +612,14 @@ namespace dsm {
         void append(K k, V1 v1, V2 v2, V3 v3) {
             ClutterRecord<K, V1, V2, V3> thispair(k, v1, v2, v3);
             decodedeque.push_back(thispair);
-            //    LOG(ERROR) << "APPEND";
         }
 
         void clear() {
             decodedeque.clear();
-            //    LOG(ERROR) << "CLEAR";
         }
 
         void rewind() {
             intit = decodedeque.begin();
-            //    LOG(ERROR) << "REWIND: empty? " << (intit == decodedeque.end());
         }
 
         bool done() {
