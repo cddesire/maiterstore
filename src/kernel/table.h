@@ -159,26 +159,6 @@ namespace dsm {
         };
     };
 
-    /*
-    template <class V>
-    struct Accumulators {
-      struct Min : public Accumulator<V> {
-        void accumulate(V* a, const V& b) { *a = std::min(*a, b); }
-        V priority(const V& delta, const V& state) {return state - std::min(state, delta);}
-      };
-
-      struct Max : public Accumulator<V> {
-        void accumulate(V* a, const V& b) { *a = std::max(*a, b); }
-        V priority(const V& delta, const V& state) {return std::max(state, delta) - state;}
-      };
-
-      struct Sum : public Accumulator<V> {
-        void accumulate(V* a, const V& b) { *a = *a + b; }
-        V priority(const V& delta, const V& state) {return delta;}
-      };
-    };
-     */
-
     template <class K, class V>
     struct TermCheckers {
 
@@ -201,8 +181,6 @@ namespace dsm {
                 while (!statetable->done()) {
                     bool cont = statetable->Next();
                     if (!cont) break;
-                    //statetable->Next();
-                    //cout << statetable->key() << "\t" << statetable->value2() << endl;
                     if (statetable->value2() != defaultv) {
                         partial_curr += static_cast<double> (statetable->value2());
                     }
