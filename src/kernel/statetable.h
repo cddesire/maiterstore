@@ -46,7 +46,6 @@ public:
             /*
              this filter is very important in large-scale experiment, if there is no such control,
              * many useless parsing will occur.,degrading the performance a lot
-             
              */
             if(bfilter){
                 //check if there is a change

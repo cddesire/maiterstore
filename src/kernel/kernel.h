@@ -109,10 +109,6 @@ namespace dsm {
             return out;
         }
 
-        // We can't immediately deserialize the parameters passed in, since sadly we don't
-        // know the type yet.  Instead, save the string values on the side, and de-serialize
-        // on request.
-
         void FromMessage(const Args& p) {
             for (int i = 0; i < p.param_size(); ++i) {
                 serialized_[p.param(i).key()] = p.param(i).value();
