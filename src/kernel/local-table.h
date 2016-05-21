@@ -10,6 +10,7 @@ namespace dsm {
 static const double kLoadFactor = 0.8;
 
 // Represents a single shard of a partitioned global table.
+
 class LocalTable :
   public TableBase,
   virtual public UntypedTable,
