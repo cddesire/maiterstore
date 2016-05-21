@@ -19,11 +19,7 @@ namespace dsm {
     template <class K, class V1, class V2, class V3>
     class TypedGlobalTable;
 
-
     class TableData;
-
-    // This interface is used by global tables to communicate with the outside
-    // world and determine the current state of a computation.
 
     struct TableHelper {
         virtual int id() const = 0;
@@ -81,10 +77,6 @@ namespace dsm {
     struct Trigger : public TriggerBase {
         virtual bool Fire(const K& k, const V& current, V& update) = 0;
     };
-
-    //#ifdef SWIGPYTHON
-    //template <class K, class V> class TriggerDescriptor : public Trigger;
-    //#endif
 
 #ifndef SWIG
 
