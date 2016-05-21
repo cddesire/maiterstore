@@ -111,17 +111,6 @@ namespace logger_impl {
 class file_logger {
 public:
 
-
-
-    /** Closes the current logger file if one exists.
-        if 'file' is not an empty string, it will be opened and 
-        all subsequent logger output will be written into 'file'.
-        Any existing content of 'file' will be cleared.
-        Return true on success and false on failure.
-     */
-
-    /// If consolelog is true, subsequent logger output will be written to stderr
-
     void set_log_to_console(bool consolelog) {
         log_to_console = consolelog;
     }
