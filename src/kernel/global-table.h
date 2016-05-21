@@ -168,9 +168,6 @@ protected:
   void termcheck();
 
 
-	//double send_overhead;
-	//double objectcreate_overhead;
-	//int sendtime;
 };
 
 template <class K, class V1, class V2, class V3>
