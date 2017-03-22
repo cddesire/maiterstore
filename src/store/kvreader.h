@@ -27,11 +27,9 @@ namespace sstore {
     template<class K, class V, class D>
     class KVReader {
     public:
-
         KVReader();
-
         ~KVReader();
-
+        
         list<sstore::Record> getRecordList(string text);
 
         KVMap<K, D> getKeyValue(string text, IterateKernel<K, V, D>* inmaiter);
@@ -42,7 +40,6 @@ namespace sstore {
 
     template<class K, class V, class D>
     vector<string> KVReader<K, V, D>::splitString(string text, string delimiter) {
-        
         while (!boost::ends_with(text, "####")) {
             boost::erase_tail(text, 1);
         }
@@ -59,9 +56,7 @@ namespace sstore {
     }
 
     template<class K, class V, class D>
-    KVReader<K, V, D>::~KVReader() {
-
-    }
+    KVReader<K, V, D>::~KVReader() {}
 
     template<class K, class V, class D>
     list<sstore::Record> KVReader<K, V, D>::getRecordList(string text) {
