@@ -1,8 +1,6 @@
 #ifndef KVMAP_H
 #define KVMAP_H
-
 #include <map>
-
 using namespace std;
 namespace sstore {
 
@@ -10,11 +8,9 @@ namespace sstore {
     class KVMap {
     public:
         KVMap();
-
         virtual ~KVMap();
-
         KVMap(const KVMap& other);
-
+        
         void add(const K& key, const V& val);
 
         void remove(const K& key);
@@ -38,19 +34,18 @@ namespace sstore {
         V& operator[](const K& key);
 
         void show();
+        
     protected:
+        
     private:
         map<K, V> _elements;
     };
 
     template <class K, class V>
-    KVMap<K, V>::KVMap() {
-        //ctor
-    }
+    KVMap<K, V>::KVMap() {}
 
     template <class K, class V>
-    KVMap<K, V>::~KVMap() {
-    }
+    KVMap<K, V>::~KVMap() {}
 
     template <class K, class V>
     KVMap<K, V>::KVMap(const KVMap& other) {
