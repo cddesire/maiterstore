@@ -1,6 +1,5 @@
 #include "client/client.h"
 
-
 using namespace dsm;
 
 DECLARE_string(result_dir);
@@ -21,7 +20,6 @@ struct KatzIterateKernel : public IterateKernel<int, float, vector<int> > {
         string linestr(line);
         int pos = linestr.find("\t");
         int source = boost::lexical_cast<int>(linestr.substr(0, pos));
-
         vector<int> linkvec;
         string links = linestr.substr(pos+1);
         int spacepos = 0;
@@ -49,6 +47,7 @@ struct KatzIterateKernel : public IterateKernel<int, float, vector<int> > {
     void init_v(const int& k, float& delta,vector<int>&data){
         delta=zero;
     }
+
     void accumulate(float& a, const float& b){
         a = a + b;
     }
@@ -70,26 +69,19 @@ struct KatzIterateKernel : public IterateKernel<int, float, vector<int> > {
     }
 };
 
-
 static int Katz(ConfigData& conf) {
     MaiterKernel<int, float, vector<int> >* kernel = new MaiterKernel<int, float, vector<int> >(
                                         conf, FLAGS_num_nodes, FLAGS_portion, FLAGS_result_dir,
                                         new Sharding::Mod,
                                         new KatzIterateKernel,
                                         new TermCheckers<int, float>::Diff);
-    
-    
     kernel->registerMaiter();
-
     if (!StartWorker(conf)) {
         Master m(conf);
         m.run_maiter(kernel);
     }
-    
     delete kernel;
     return 0;
 }
 
 REGISTER_RUNNER(Katz);
-
-
