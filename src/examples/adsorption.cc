@@ -1,6 +1,5 @@
 #include "client/client.h"
 
-
 using namespace dsm;
 
 DECLARE_string(result_dir);
@@ -9,24 +8,19 @@ DECLARE_double(portion);
 DECLARE_int32(adsorption_starts);
 DECLARE_double(adsorption_damping);
 
-
 struct AdsorptionIterateKernel : public IterateKernel<int, float, vector<Link> > {
-    
     float zero;
-
     AdsorptionIterateKernel() : zero(0){}
 
     void read_data(string& line, int& k, vector<Link>& data){
         string linestr(line);
         int pos = linestr.find("\t");
         int source = boost::lexical_cast<int>(linestr.substr(0, pos));
-
         vector<Link> linkvec;
         int spacepos = 0;
         string links = linestr.substr(pos+1);
         while((spacepos = links.find_first_of(" ")) != links.npos){
             Link to(0, 0);
-
             if(spacepos > 0){
                 string link = links.substr(0, spacepos);
                 int cut = links.find_first_of(",");
@@ -36,7 +30,6 @@ struct AdsorptionIterateKernel : public IterateKernel<int, float, vector<Link> >
             links = links.substr(spacepos+1);
             linkvec.push_back(to);
         }
-
         k = source;
         data = linkvec;
     }
@@ -78,18 +71,13 @@ static int Adsorption(ConfigData& conf) {
                                         new Sharding::Mod,
                                         new AdsorptionIterateKernel,
                                         new TermCheckers<int, float>::Diff);
-    
-    
     kernel->registerMaiter();
-
     if (!StartWorker(conf)) {
         Master m(conf);
         m.run_maiter(kernel);
     }
-    
     delete kernel;
     return 0;
 }
 
 REGISTER_RUNNER(Adsorption);
-
